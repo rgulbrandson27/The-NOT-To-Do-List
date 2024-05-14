@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The NOT To-do List</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./not-to-do.css" />
+  </head>
+
+  <body>
+    <h1>The Not To-Do List</h1>
+    <h4>The Bad-Habit-Kicker-Tracker</h4>
+
+    <div class="container col-sm-8 col-md-6">
+      <div class="row box">
+        <div class="col">
+              <label for="challengeInputItem" class="form-label">This week's DROP KICK PICK!</label>
+            </div>
+          <div class="row">
+            <div class="col-9">
+              <input type="text" required id="challengeInputItem" class="form-control" placeholder="Enter Challenge" aria-describedby="challengeInputItem"/>
+            </div>
+          </form>
+            <div class="col-3">
+              <button id="submit-button" onclick="addNewChallenge(event)">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <table class="table mt-4 custom-table">
+          <thead class="custom">
+            <tr class="tr" id="head-tr">
+              <th scope="col col-wk">Wk</th>
+              <th scope="col col-kick">Casualty</th>
+              <th scope="col col-day">M</th>
+              <th scope="col col-day">T</th>
+              <th scope="col col-day">W</th>
+              <th scope="col col-day">R</th>
+              <th scope="col col-day">F</th>
+              <th scope="col col-day">S</th>
+              <th scope="col col-day">S</th>
+              <div class="dispose">
+                <th scope="col col-dispose">Kicked!</th>
+                <th scope="col col-dispose">Retry</th>
+                <th scope="col col-dispose">Blunder</th>
+              </div>
+            </tr>
+          </thead>
+
+          <tbody class="table-group-divider" id="challenge-table-body">
+            <!-- Start -->
+            <tr class="tr challengeRow" id="challenge-table-row">
+              <th class="th" scope="row">1</th>
+                  <td class="listed-habit">Staying up past midnight.</td>
+                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
+                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
+                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
+                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
+                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
+                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
+                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
+              
+                      <td class="btn btn-smaller btn-primary rounded-circle col-dispose"></td>
+                      <td class="btn btn-smaller btn-primary rounded-circle col-dispose"></td>
+                      <td class="btn btn-smaller btn-primary rounded-circle col-dispose"></td>
+                   
+                    </tr>
+            
+            <!-- End -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+
+
+  <!-- <button id="add" class="btn btn-outline-primary">Create</button>
+          <table class="table table-striped table-hover">
+            <tr class="active table-info">
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>  -->
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="not-to-do.js"></script>
+</html>
+
+<!-- 
+<td class="td">
+  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+</td>
+<td>
+  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+</td>
+<td>
+  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+</td>
+<td>
+  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+</td>
+<td>
+  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+</td>
+<td>
+  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+</td>
+<td>
+  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+</td> -->
