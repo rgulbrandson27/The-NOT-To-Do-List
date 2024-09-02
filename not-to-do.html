@@ -15,117 +15,159 @@
   <body>
     <h1>The Not To-Do List</h1>
     <h4>The Bad-Habit-Kicker-Tracker</h4>
-
+<!-- Input Section -->
     <div class="container col-sm-8 col-md-6">
-      <div class="row box">
+      <div class="row box rounded-3 mb-4">
         <div class="col">
               <label for="challengeInputItem" class="form-label">This week's DROP KICK PICK!</label>
             </div>
           <div class="row">
             <div class="col-9">
-              <input type="text" required id="challengeInputItem" class="form-control" placeholder="Enter Challenge" aria-describedby="challengeInputItem"/>
+              <input type="text" required id="challengeInputItem" class="form-control fs-4" placeholder="Enter Challenge" aria-describedby="challengeInputItem"/>
             </div>
-          </form>
-            <div class="col-3">
-              <button id="submit-button" onclick="addNewChallenge(event)">Submit</button>
+               <div class="col-3">
+              <button id="submit-button" class="fs-" onclick="addNewChallenge(event)">Submit</button>
             </div>
           </div>
         </div>
       </div>
+<!-- Table Section -->
+      <div class="container col-sm-10">
+        <table class="table custom-table mt-4 table-striped table-hover text-center rounded-3">
+          <thead class="rounded-top-3">
+            <tr>
+              <th class="col col-spacer"></th>
+              <th scope="col">Wk</th>
+              <th class="col col-spacer"></th>
+              <th scope="col" class="text-start fs-6">This week I will <strong>NOT . . .</strong></th>
+              <th scope="col" class="col-day">M</th>
+              <th scope="col" class="col-day">T</th>
+              <th scope="col" class="col-day">W</th>
+              <th scope="col" class="col-day">R</th>
+              <th scope="col" class="col-day">F</th>
+              <th scope="col" class="col-day">S</th>
+              <th scope="col" class="col-day col-day-last me-2">S</th>
+              <th scope="col" class="col col-spacer"></th>
+       
+              <th scope="col" class="col-result">Kicked!</th>
+              <th scope="col" class="col-result">Retry</th>
+              <th scope="col" class="col-result">Blunder</th>
+              <th scope="col" class="col col-spacer"></th>
 
-        <table class="table mt-4 custom-table">
-          <thead class="custom">
-            <tr class="tr" id="head-tr">
-              <th scope="col col-wk">Wk</th>
-              <th scope="col col-kick">Casualty</th>
-              <th scope="col col-day">M</th>
-              <th scope="col col-day">T</th>
-              <th scope="col col-day">W</th>
-              <th scope="col col-day">R</th>
-              <th scope="col col-day">F</th>
-              <th scope="col col-day">S</th>
-              <th scope="col col-day">S</th>
-              <div class="dispose">
-                <th scope="col col-dispose">Kicked!</th>
-                <th scope="col col-dispose">Retry</th>
-                <th scope="col col-dispose">Blunder</th>
-              </div>
+              <th scope="col" class="col-dispose"></th>
+              <th scope="col" class="col-dispose"></th>
+              <th class="col col-spacer"></th>
             </tr>
           </thead>
 
-          <tbody class="table-group-divider" id="challenge-table-body">
-            <!-- Start -->
-            <tr class="tr challengeRow" id="challenge-table-row">
-              <th class="th" scope="row">1</th>
-                  <td class="listed-habit">Staying up past midnight.</td>
-                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
-                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
-                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
-                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
-                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
-                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
-                      <td><input class="form-check-input checkbox col-day" type="checkbox" value="" aria-label="checkbox"/></td>
-              
-                      <td class="btn btn-smaller btn-primary rounded-circle col-dispose"></td>
-                      <td class="btn btn-smaller btn-primary rounded-circle col-dispose"></td>
-                      <td class="btn btn-smaller btn-primary rounded-circle col-dispose"></td>
+          <tbody id="challenge-table-body">
+             <tr class="align-items-center old">
+              <td class="col col-spacer"></td>
+              <td scope="row">1</td>
+              <td class="col col-spacer"></td>
+              <td class="text-start fs-6">SAMPLE - Stay up past midnight.</td>
+                      <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                      <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                      <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                      <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                      <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                      <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                      <td><input type="checkbox" class="checkbox col-day-last me-2" aria-label="checkbox" checked/></td>
+                      <td class="col col-spacer"></td>
+
+                      <td class="col-result icon"><div class="oval m-auto"></div></td>
+                      <td class="col-result icon"><div class="oval m-auto"></div></td> 
+                      <td class="col-result icon"><div class="oval m-auto"></div></td>
+                      <td class="col col-spacer"></td>
+               
+                      <td class="square"><img class="icon col-dispose trash" onclick="deleteChallengeRow(event)" src="images/delete.png"></td>
+                      <td><img class="icon col-dispose reset" onclick="resetChallengeRow(event)" src="images/reset.png"></td>
+                      <td class="col col-spacer"></td>
+              </tr>
+              <tr class="align-items-center old">
+                <td class="col col-spacer"></td>
+                <td scope="row">2</td>
+                <td class="col col-spacer"></td>
+                <td class="text-start fs-6">SAMPLE - Drink caffeine after 4pm.</td>.</td>
+                        <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                        <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                        <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                        <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                        <td><input type="checkbox" class="checkbox" aria-label="checkbox"></td>
+                        <td><input type="checkbox" class="checkbox" aria-label="checkbox"/></td>
+                        <td><input type="checkbox" class="checkbox col-day-last me-2" aria-label="checkbox"/></td>
+                        <td class="col col-spacer"></td>
+  
+                        <td class="col-result icon"><div class="oval m-auto"></div></td>
+                        <td class="col-result icon"><div class="oval m-auto"></div></td> 
+                        <td class="col-result icon"><div class="oval m-auto"></div></td>
+                        <td class="col col-spacer"></td>
+                 
+                        <td><img class="icon col-dispose trash" onclick="deleteChallengeRow(event)" src="images/delete.png"></td>
+                        <td><img class="icon col-dispose reset" onclick="resetChallengeRow(event)" src="images/reset.png"></td>
+                        <td class="col col-spacer"></td>
+                </tr>
+                <tr class="align-items-center old">
+                  <td class="col col-spacer"></td>
+                  <td scope="row">3</td>
+                  <td class="col col-spacer"></td>
+                  <td class="text-start fs-6">SAMPLE - Spend money on fast-food.</td>
+                          <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                          <td><input type="checkbox" class="checkbox" aria-label="checkbox" checked/></td>
+                          <td><input type="checkbox" class="checkbox" aria-label="checkbox"/></td>
+                          <td><input type="checkbox" class="checkbox" aria-label="checkbox"/></td>
+                          <td><input type="checkbox" class="checkbox" aria-label="checkbox"/></td>
+                          <td><input type="checkbox" class="checkbox" aria-label="checkbox"/></td>
+                          <td><input type="checkbox" class="checkbox col-day-last me-2" aria-label="checkbox"/></td>
+                          <td class="col col-spacer"></td>
+    
+                          <td class="col-result icon"><div class="oval m-auto"></div></td>
+                          <td class="col-result icon"><div class="oval m-auto"></div></td> 
+                          <td class="col-result icon"><div class="oval m-auto"></div></td>
+                          <td class="col col-spacer"></td>
                    
-                    </tr>
-            
-            <!-- End -->
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </body>
+                          <td><img class="icon col-dispose trash" onclick="deleteChallengeRow(event)"src="images/delete.png"></td>
+                          <td><img class="icon col-dispose reset" onclick="resetChallengeRow(event)" src="images/reset.png"></td>
+                          <td class="col col-spacer"></td>
+                  </tr>
 
-
-  <!-- <button id="add" class="btn btn-outline-primary">Create</button>
-          <table class="table table-striped table-hover">
-            <tr class="active table-info">
-              <th>Company</th>
-              <th>Contact</th>
-              <th>Country</th>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Centro comercial Moctezuma</td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>  -->
+                </tbody>
+              </table>
+          </div>
+    </div> 
+  </div>
 
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   <script src="not-to-do.js"></script>
 </html>
 
-<!-- 
-<td class="td">
-  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
-</td>
-<td>
-  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
-</td>
-<td>
-  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
-</td>
-<td>
-  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
-</td>
-<td>
-  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
-</td>
-<td>
-  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
-</td>
-<td>
-  <input class="form-check-input mt-0 checkbox col-day" type="checkbox" value="" aria-label="Checkbox for following text input"/>
-</td> -->
+<!-- <img id = "o" src="images/FlowerO.png"> -->
+<!-- const checkmark = document.createElement("img");
+checkmark.id = "checkmark";
+checkmark.src = 'images/checkmark.png';
+checkmark.className = 'result-image';
+
+const retry = document.createElement("img");
+retry.id = "retry";
+retry.src = 'images/retry.png';
+retry.className = 'result-image';
+
+const blunder = document.createElement("img");
+blunder.id = "blunder";
+blunder.src = 'images/blunder.png';
+blunder.className = 'result-image';
+
+const trash = document.createElement("img");
+trash.id = "trash";
+trash.src = 'images/delete.png';
+trash.className = 'result-image';
+
+const reset = document.createElement("img");
+reset.id = "retry";
+reset.src = 'images/retry.png';
+reset.className = 'result-image'; -->
+
+
+
+
