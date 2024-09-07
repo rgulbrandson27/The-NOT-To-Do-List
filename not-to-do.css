@@ -79,8 +79,8 @@ h4 {
 } */
 
 .table td, .table th {
-  vertical-align: middle; /* Centers content vertically */
-  text-align: center; /* Centers content horizontally */
+  vertical-align: middle; 
+  text-align: center; 
 }
 
 .custom-table th {
@@ -135,41 +135,6 @@ h4 {
 }
 
 
-/* #blunder {
-  height: 36px;
-  width: 50px;
-} */
-
-
-
-/* .result-image {
-  width: 100%; /* Make the image fit the button */
-  /* height: 100%; Make the image fit the button */
-  /* object-fit: cover; /* Ensure the image covers the button area */
-
-
-
-/* 
-.result {
-  position:absolute;
-  background-color: #576490;
-  right: 10px;
-  top: 50%;
-  transform: translate(-50%);
-
-  background: none;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  z-index: 10;
-}   */
-
-/* .square {
-  background:#a3bcf9 !important;
-  height: 30px !important;
-  width: 30px !important;
-  margin: 0 auto !important;
-} */
 
 .result {
   padding: 10px;
